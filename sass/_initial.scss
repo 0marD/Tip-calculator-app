@@ -1,0 +1,9 @@
+@use "variables";
+:root {
+  font-size: 20px;
+}
+body {
+  font-family: "Space Mono", monospace;
+  background-color: variables.$Light-grayish-cyan;
+  color: variables.$Very-dark-cyan;
+}

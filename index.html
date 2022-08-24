@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <!-- css style -->
+  <link rel="stylesheet" href="./sass/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
+
+  <!-- font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+  <header class="block header">
+    <h1 class="heading">SPLI<br>TTER</h1>
+  </header>
+
+  <main class="main block">
+
+    <section class="dataEntry">
+      <div class="Bill">
+        <label for="inputBill" class="label">Bill</label>
+        <input id="inputBill" type="number" class="Bill--input input">
+      </div>
+      <fieldset class="btns">
+        <legend class="btns--title">Select Tip %</legend>
+        <button class="btns-btn">5%</button>
+        <button class="btns-btn btns-btn--selected">10%</button>
+        <button class="btns-btn">15%</button>
+        <button class="btns-btn">20%</button>
+        <button class="btns-btn">50%</button>
+        <input type="number" class="btns--input input" placeholder="Custom">
+      </fieldset>
+      <div class="people">
+        <p class="inputpeople--error">Can't be zero</p>
+        <label for="inputpeople" class="label peopleLabel">Number of people</label>
+        <input id="inputpeople" type="number" min="1" class="people--input input ">
+      </div>
+    </section>
+
+    <section class="result">
+      <div class="results">
+        <div class="results__tipAmount">
+          <p class="tipAmount__heading">Tip Amount</p>
+          <p class="tipAmount__subheading">/ person</p>
+        </div>
+        <p class="results__value results__value--amount">0</p>
+        <div class="results__total">
+          <p class="total__heading">Total</p>
+          <p class="total__subheading">/ person</p>
+        </div>
+        <p class="results__value results__value--total">0</p>
+      </div>
+      <button class="result__button button">Reset</button>
+    </section>
+
+  </main>
+
+  <footer class="attribution">
+    <p>Challenge by<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        title="Visit Frontend mentor">&nbsp;Frontend Mentor</a>.
+      <br>
+      Coded by<a href="https://omar-diaz.vercel.app/" target="_blank" title="Visit portfolio">&nbsp;Omar Díaz
+        Hernández</a>.
+    </p>
+  </footer>
+  <script defer src="./main.js"></script>
+</body>
+
+</html>
+
+<!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->

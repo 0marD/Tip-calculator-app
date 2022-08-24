@@ -1,0 +1,251 @@
+@use "initial";
+@use "variables";
+
+.block {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.heading {
+    color: variables.$Very-dark-cyan;
+    text-align: center;
+    margin: 2em auto;
+    font-size: 1.5rem;
+}
+
+.input {
+    background-color: variables.$Very-light-grayish-cyan;
+    width: 100%;
+    padding: 0.2em 1em;
+    border-radius: 0.2em;
+    text-align: right;
+    border: .125rem solid transparent;
+
+    &:focus {
+        border: .125rem solid variables.$Strong-cyan;
+    }
+
+}
+
+.label {
+    color: variables.$Dark-grayish-cyan;
+    font-size: 0.9rem;
+    margin: 0.5em 0;
+}
+
+.main {
+    background-color: variables.$White;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em 1em 0.5em 0.5em;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 1.5em;
+}
+
+.Bill--input {
+    background: url('../images/icon-dollar.svg') no-repeat left variables.$Very-light-grayish-cyan;
+    background-position-x: .9rem;
+
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    justify-content: space-between;
+    margin: 1.5em 0;
+}
+
+.btns--title {
+    color: variables.$Dark-grayish-cyan;
+    font-size: 0.9rem;
+    margin: 0.5em 0;
+}
+
+.btns-btn {
+    background-color: variables.$Very-dark-cyan;
+    color: variables.$White;
+    border-radius: 0.5em;
+    padding: 0.5em 0;
+
+    &:hover {
+        background-color: variables.$Strong-cyan;
+        color: variables.$Very-dark-cyan;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: variables.$Light-grayish-cyan;
+    }
+
+    &--selected {
+        background-color: variables.$Strong-cyan;
+        color: variables.$Very-dark-cyan;
+    }
+}
+
+
+
+.people--input {
+    background: url('../images/icon-person.svg') no-repeat left variables.$Very-light-grayish-cyan;
+    background-position-x: .9rem;
+}
+
+.inputpeople--error {
+    font-size: .8rem;
+    color: hsl(16, 44%, 66%);
+    text-align: right;
+    display: none;
+}
+
+.error {
+    border: .125em solid hsl(16, 44%, 66%);
+    color: hsl(16, 44%, 66%);
+
+    &:focus {
+        border: .125em solid hsl(16, 44%, 66%);
+        color: hsl(16, 44%, 66%);
+    }
+}
+
+.btns--input::placeholder {
+    padding-right: 15%;
+}
+
+.result {
+    background-color: variables.$Very-dark-cyan;
+    border-radius: 1em;
+    margin-top: 1.5em;
+    padding: 1em;
+    color: variables.$White;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.tipAmount__heading,
+.total__heading {
+    font-size: .7rem;
+}
+
+.tipAmount__subheading,
+.total__subheading {
+    font-size: .5rem;
+    color: variables.$Grayish-cyan;
+}
+
+.results__value {
+    color: variables.$Strong-cyan;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: .5em;
+}
+
+.result__button {
+    text-align: center;
+    width: 100%;
+    color: variables.$Very-dark-cyan;
+    background-color: variables.$Strong-cyan;
+    border-radius: .25em;
+    margin-top: 1.5em;
+    text-transform: uppercase;
+    margin-top: .5em;
+    padding: .25em;
+
+    &:hover {
+        cursor: pointer;
+        background-color: variables.$Light-grayish-cyan;
+    }
+
+    &:active {
+        opacity: .5;
+    }
+}
+
+.attribution {
+    display: flex;
+    width: max-content;
+    font-size: 0.7rem;
+    margin: 0 auto;
+    margin-top: 3em;
+    padding-bottom: 2em;
+}
+
+.attribution a {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.attribution a:hover {
+    opacity: 0.5;
+}
+
+@media screen and (orientation:landscape) and (min-width:728px) {
+    :root {
+        font-size: 15px;
+    }
+
+    .block {
+        width: 750px;
+        max-width: none;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+        padding: 2em;
+    }
+
+    .btns {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .result {
+        height: 90%;
+        position: relative;
+    }
+
+    .tipAmount__heading,
+    .total__heading {
+        font-size: 1em;
+    }
+
+    .tipAmount__subheading,
+    .total__subheading {
+        font-size: .8rem;
+    }
+
+    .results__value {
+        font-size: 2rem;
+    }
+
+    .result__button {
+        position: absolute;
+        bottom: 1em;
+        width: 90%;
+        padding: .5em;
+    }
+}
+
+@media screen and (orientation:landscape) and (min-width:1024px) {
+    :root {
+        font-size: 20px;
+    }
+
+    .block {
+        width: 1000px;
+
+    }
+
+
+}
